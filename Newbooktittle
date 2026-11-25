@@ -1,0 +1,13 @@
+new_book = st.text_input("Въведете заглавие на книга")
+
+if st.button("Добави книга"):
+
+    if new_book != "":
+
+        books.append(new_book)
+
+        st.success("Книгата е добавена!")
+
+    else:
+
+        st.warning("Моля, въведете заглавие!")
