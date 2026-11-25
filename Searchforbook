@@ -1,0 +1,10 @@
+st.subheader("Търсене на книга")
+search = st.text_input("Каква книга търсите?")
+if st.button("Търси"):    
+  found = False    
+for book in st.session_state.books:        
+  if search.lower() in book.lower():            
+    st.success("Намерена книга: " + book)            
+    found = True    
+  if found == False:        
+    st.warning("Няма такава книга!")
